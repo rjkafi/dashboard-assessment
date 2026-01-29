@@ -1,16 +1,77 @@
-# React + Vite
+# 📊 Frontend Dashboard Assessment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive **Frontend Dashboard UI** built using **React + Vite** and **Tailwind CSS** as part of a **Frontend Developer Skill Assessment**.  
+The project focuses on accurately translating a provided **Figma design** into a clean, scalable, and responsive frontend application while maintaining proper code structure and UI consistency.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Overview
 
-## React Compiler
+This project was completed as a hiring assessment task. The objective was to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Convert a provided Figma design into a functional frontend UI
+- Ensure responsiveness across desktop, tablet, and mobile devices
+- Maintain clean component structure and readable code
+- Follow modern frontend development best practices
 
-## Expanding the ESLint configuration
+The application does not include backend logic and focuses purely on UI implementation.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🎨 Figma Design Reference
+
+The UI was implemented based on the design provided by the hiring team.
+
+🔗 **Figma Link:**  
+https://www.figma.com/design/VP7gq0YBFt96zWQTigQUXy/Assessment-for-frontend-developer?node-id=0-1&p=f&t=fr89UR6KT0ffvI6p-0
+
+---
+
+## 🚀 Tech Stack
+
+- **React** – Component-based UI development
+- **Vite** – Fast development server and build tool
+- **Tailwind CSS** – Utility-first CSS for styling and responsiveness
+- **React Router DOM** – Client-side routing and layouts
+- **Recharts** – Data visualization and charts
+- **React Icons** – Icon library
+- **ESLint** – Code linting and quality enforcement
+
+---
+
+## ✨ Features
+
+- Fully responsive dashboard layout
+- Sidebar navigation with active route handling
+- Clean header and content sections aligned with Figma design
+- Chart and data visualization using Recharts
+- Reusable and modular React components
+- Scalable folder and route structure
+- Pixel-consistent spacing, colors, and typography
+
+---
+
+## 🧭 Application Routes
+
+Example route structure used in the project:
+
+- `/` – Dashboard overview
+- `/overview` – Charts and analytics view
+- `/call-logs` – Call Logs and History UI
+- `/appointments` – Appointments page layout
+- `/settings` – Settings page layout
+- `/settings/profile` – Profile page inside Settings page
+
+*(Routes may vary depending on implementation, but follow a clean and scalable structure.)*
+
+---
+
+## 📁 Project Structure
+
+```txt
+src/
+├── components/     # Reusable UI components
+├── layouts/        # Shared layout (Sidebar, Header)
+├── pages/          # Page-level components
+├── assets/         # Static assets (images, icons)
+└── main.jsx        # Application entry point and also Route configuration
