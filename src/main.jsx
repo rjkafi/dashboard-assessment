@@ -1,33 +1,44 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from './App.jsx';
-import './index.css';
-import DashboardLayout from './layouts/DashboardLayout.jsx';
-import CallLogs from './pages/CallLogs.jsx';
-import Overview from './pages/Overview.jsx';
+import ProfileSeletion from "./components/ProfileSeletion.jsx";
+import "./index.css";
+import DashboardLayout from "./layouts/DashboardLayout.jsx";
+import Appointments from "./pages/Appointments.jsx";
+import CallLogs from "./pages/CallLogs.jsx";
+import Overview from "./pages/Overview.jsx";
+import Settings from "./pages/Settings.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <DashboardLayout/>,
+    element: <DashboardLayout />,
     children: [
       {
         path: "/",
-        element: <Overview/>,
+        element: <Overview />,
       },
       {
         path: "/call-logs",
-        element: <CallLogs/>,
+        element: <CallLogs />,
       },
-     
+      {
+        path: "/appointments",
+        element: <Appointments />,
+      },
+      {
+        path: "/settings",
+        element: <Settings />,
+      },
+      {
+        path: "/settings/profile",
+        element: <ProfileSeletion />,
+      },
     ],
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-     <RouterProvider router={router}>
-     <App />
-     </RouterProvider>  
-  </StrictMode>,
-)
+    <RouterProvider router={router}></RouterProvider>
+  </StrictMode>
+);

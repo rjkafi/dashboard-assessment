@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-
 export default function DashboardLayout() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex h-screen bg-[#0F1F45] overflow-hidden">
+    <div className="flex font-inter h-screen bg-[#0F1F45] overflow-hidden">
       {/* Sidebar */}
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 

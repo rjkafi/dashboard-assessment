@@ -6,16 +6,16 @@ import { getIconUrl } from "../utils";
 export default function Sidebar({ isOpen, setIsOpen }) {
   const navItemClass = ({ isActive }) =>
     `
-    flex items-center gap-x-2 px-4 py-3 rounded-2xl transition-all duration-300
+    flex items-center gap-x-1.5 px-2 py-3 rounded-2xl transition-all duration-300
     ${
       isActive
         ? `
           text-white
           bg-gradient-to-b
-          from-[rgba(0,136,255,0.3)]
-          to-[rgba(119,192,255,0.3)]
+          from-[#152252]
+          to-[#111B3C]
           shadow-[0_3.71px_4.85px_#57B1FF27,0_10.27px_13.4px_#57B1FF38,0_24.72px_32.26px_#57B1FF30,0_42px_107px_#57B1FF57,inset_0_1px_4px_2px_#D2EAFF,inset_0_1px_18px_2px_#D2EAFF]
-          brightness-110
+          brightness-90
         `
         : "text-gray-400 hover:brightness-110"
     }
@@ -35,7 +35,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       </li>
 
       <li>
-        <NavLink to="/calls" className={navItemClass}>
+        <NavLink to="/call-logs" className={navItemClass}>
           <img
             className="w-6 h-6"
             src={getIconUrl("call.png")}
