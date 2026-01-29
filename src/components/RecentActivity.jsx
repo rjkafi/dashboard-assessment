@@ -29,7 +29,7 @@ const RecentActivity = () => {
   return (
     <div
       className="
-        w-full max-w-140 h-96.5
+        w-full max-w-140 
         bg-[#0F172B]/50
         border 
       border-[#2B7FFF]/20  
@@ -39,11 +39,11 @@ const RecentActivity = () => {
     >
       <h2 className="text-lg font-semibold mb-1.5">Recent Activity</h2>
 
-      <div className="space-y-3 ">
+      <div className="space-y-2 ">
         {activities.map((item) => (
           <div
             key={item.id}
-            className="flex gap-3 bg-[#1D293D]/50 p-3 rounded-lg"
+            className="flex gap-3 bg-[#1D293D]/50 p-2.5 rounded-lg"
           >
             <span className={`w-2 h-2 mt-2 rounded-full ${item.color}`}></span>
 

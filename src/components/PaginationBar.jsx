@@ -4,7 +4,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 export default function PaginationBar() {
   return (
     <>
-      <div className="flex mx-auto items-center justify-center gap-2 text-sm text-blue-400 mt-6">
+      <div className="flex flex-wrap  mx-auto items-center justify-center gap-2 text-sm text-blue-400 mt-6">
         {/* Previous */}
         <button className="flex items-center gap-1 px-3 py-2 rounded-md text-gray-400 hover:text-blue-400 disabled:opacity-40">
           <FiChevronLeft />

@@ -9,12 +9,12 @@ const BookingLink = () => {
         <input
           readOnly
           value="https://techstore.com/book?id=store123"
-          className="flex-1 bg-[#0A0A0F]/50 border border-[#00FF88]/20 rounded-2xl px-4 py-3.5 text-sm outline-none"
+          className="flex-1 truncate bg-[#0A0A0F]/50 border border-[#00FF88]/20 rounded-2xl px-4 py-3.5 text-sm outline-none"
         />
 
         <button
           className="
-          flex items-center gap-x-2 px-4 py-3 rounded-2xl transition-all duration-300
+          flex items-center justify-center text-center gap-x-2 px-4 py-3 rounded-2xl transition-all duration-300
         text-white
           bg-linear-to-b
           from-[#152252]

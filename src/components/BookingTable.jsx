@@ -37,14 +37,16 @@ const BookingTable = () => {
           <tbody>
             {data.map((row, i) => (
               <tr key={i} className="border-t   border-[#162F61]">
-                <td className="px-7 py-4.5 text-[#51A2FF]">{row.name}</td>
-                <td className="px-7 py-4.5">{row.phone}</td>
-                <td className="px-7 py-4.5">{row.email}</td>
-                <td className="px-7 py-4.5">{row.device}</td>
-                <td className="px-7 py-4.5">{row.repair}</td>
-                <td className="px-7 py-4.5">{row.date}</td>
-                <td className="px-7 py-4.5">{row.slot}</td>
-                <td className="px-7 py-4.5">{times[i]}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5 text-[#51A2FF]">
+                  {row.name}
+                </td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{row.phone}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{row.email}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{row.device}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{row.repair}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{row.date}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{row.slot}</td>
+                <td className="px-3 md:px-7 py-3 md:py-4.5">{times[i]}</td>
               </tr>
             ))}
           </tbody>

@@ -6,7 +6,7 @@ import PaginationBar from "../components/PaginationBar";
 
 export default function Appointments() {
   return (
-    <div className="space-y-6  text-white">
+    <div className="space-y-5  text-white">
       <AppointmentCard />
       <BookingLink />
       <BookingTable />

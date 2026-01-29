@@ -26,11 +26,11 @@ const AppointmentCard = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
       {stats.map((item, i) => (
         <div
           key={i}
-          className="bg-[#0F173B]/50 border border-[#2B7FFF]/20 rounded-2xl p-5"
+          className="bg-[#0F173B]/50 border border-[#2B7FFF]/20 rounded-2xl p-4 md:p-5 "
         >
           <div className="flex items-center gap-2 text-sm text-[#90A1B9]">
             <span className={`${item.color} text-xl`}>{item.icon}</span>
