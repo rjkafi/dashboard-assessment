@@ -2,7 +2,7 @@ import React from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import { getIconUrl } from "../utils";
 
-export default function Header({ onMenuClick }) {
+export default function Header({ onMenuClick, title }) {
   return (
     <>
       {/* header */}
@@ -15,7 +15,7 @@ export default function Header({ onMenuClick }) {
           </button>
         </div>
         <div>
-          <h4 className="text-sm md:text-[32px]">Dashboard Overview</h4>
+          <h4 className="text-sm md:text-[32px]">{title}</h4>
         </div>
         <div className="flex gap-10 items-center">
           <img

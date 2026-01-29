@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ProfileRow from "../components/ProfileRow";
+import ProfileRow from "../components/ProfileInput";
 import { getIconUrl } from "../utils";
 
 export default function Settings() {

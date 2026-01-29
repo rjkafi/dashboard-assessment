@@ -1,9 +1,18 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 export default function DashboardLayout() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const routeTitles = {
+    "/": "Dashboard Overview",
+    "/call-logs": "Call Logs & History",
+    "/appointments": "Appointments",
+    "/settings": "Settings",
+  };
+  const pageTitle = routeTitles[location.pathname] || "Dashboard";
   return (
     <div className="flex font-inter h-screen bg-[#0F1F45] overflow-hidden">
       {/* Sidebar */}
@@ -13,7 +22,7 @@ export default function DashboardLayout() {
       <div className="flex flex-col flex-1">
         {/* Header */}
         <div className="sticky top-0 z-40">
-          <Header onMenuClick={() => setIsOpen(true)} />
+          <Header onMenuClick={() => setIsOpen(true)} title={pageTitle} />
         </div>
 
         {/* Page Content */}
