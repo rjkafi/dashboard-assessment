@@ -1,43 +1,45 @@
+import { getIconUrl } from "../utils";
+
 const statsData = [
   {
     id: 1,
     title: "Total Calls Today",
     value: "127",
     change: "+12%",
-    // icon: "",
-    iconBg: "bg-blue-500",
+    icon: "call.png",
+    iconBg: "bg-linear-to-t from-[#00B8DB] to-[#2B7FFF]",
   },
   {
     id: 2,
     title: "AI-Handled Calls",
     value: "98",
     change: "+77%",
-    // icon: "",
-    iconBg: "bg-purple-500",
+    icon: "handle-call.png",
+    iconBg: "bg-linear-to-t from-[#F6339A] to-[#AD46FF]",
   },
   {
     id: 3,
     title: "Warm Transfer",
     value: "23",
     change: "+18%",
-    // icon: "",
-    iconBg: "bg-orange-500",
+    icon: "Transfer.png",
+    iconBg: "bg-linear-to-t from-[#FB2C36] to-[#FF6900]",
   },
   {
     id: 4,
     title: "Appointments Booked",
     value: "34",
     change: "+8%",
-    // icon: "",
-    iconBg: "bg-green-500",
+    icon: "appointments.png",
+    iconBg: "bg-linear-to-t from-[#00BC7D] to-[#00C950]",
   },
   {
     id: 5,
     title: "Missed / Failed Calls",
     value: "6",
     change: "-3%",
-    // icon: "",
-    iconBg: "bg-red-500",
+    icon: "failed.png",
+    iconBg: "bg-linear-to-t from-[#FF2056] to-[#FB2C36]",
     negative: true,
   },
   {
@@ -45,8 +47,8 @@ const statsData = [
     title: "Avg Call Duration",
     value: "3:42",
     change: "+15%",
-    // icon: "",
-    iconBg: "bg-indigo-500",
+    icon: "duration.png",
+    iconBg: "bg-linear-to-t from-[#2B7FFF] to-[#615FFF]",
   },
 ];
 
@@ -64,8 +66,6 @@ const Stats = () => {
         "
       >
         {statsData.map((item) => {
-          const Icon = item.icon;
-
           return (
             <div
               key={item.id}
@@ -101,9 +101,13 @@ const Stats = () => {
 
               {/* Icon */}
               <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.iconBg}`}
+                className={`w-12 h-12 rounded-[14px] flex items-center justify-center ${item.iconBg}`}
               >
-                {/* <Icon className="w-6 h-6 text-white" /> */}
+                <img
+                  className="w-6 h-6"
+                  src={getIconUrl(item.icon)}
+                  alt={item.title}
+                />
               </div>
             </div>
           );

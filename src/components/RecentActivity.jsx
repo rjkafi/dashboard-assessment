@@ -34,12 +34,12 @@ const RecentActivity = () => {
         border 
       border-[#2B7FFF]/20  
         rounded-2xl
-         p-6 text-white
+         p-4 text-white
       "
     >
-      <h2 className="text-lg font-semibold mb-4">Recent Activity</h2>
+      <h2 className="text-lg font-semibold mb-1.5">Recent Activity</h2>
 
-      <div className="space-y-4">
+      <div className="space-y-3 ">
         {activities.map((item) => (
           <div
             key={item.id}
